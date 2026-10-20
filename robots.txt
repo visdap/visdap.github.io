@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://visdap.github.io/sitemap.xml

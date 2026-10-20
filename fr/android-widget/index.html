@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Widget horloge 24 heures pour Android — Visdap</title>
+  <meta name="description" content="Une horloge ronde de 24 heures avec vos tâches sur l&#x27;écran d&#x27;accueil Android. Visdap propose un widget horloge, un widget de liste de tâches, une horloge flottante et un fond d&#x27;écran animé.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#eef6f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09181b" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://visdap.github.io/fr/android-widget/">
+  <link rel="alternate" hreflang="en" href="https://visdap.github.io/en/android-widget/">
+  <link rel="alternate" hreflang="uk" href="https://visdap.github.io/uk/android-widget/">
+  <link rel="alternate" hreflang="de" href="https://visdap.github.io/de/android-widget/">
+  <link rel="alternate" hreflang="es" href="https://visdap.github.io/es/android-widget/">
+  <link rel="alternate" hreflang="fr" href="https://visdap.github.io/fr/android-widget/">
+  <link rel="alternate" hreflang="x-default" href="https://visdap.github.io/en/android-widget/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visdap">
+  <meta property="og:title" content="Widget horloge 24 heures pour Android — Visdap">
+  <meta property="og:description" content="Une horloge ronde de 24 heures avec vos tâches sur l&#x27;écran d&#x27;accueil Android. Visdap propose un widget horloge, un widget de liste de tâches, une horloge flottante et un fond d&#x27;écran animé.">
+  <meta property="og:url" content="https://visdap.github.io/fr/android-widget/">
+  <meta property="og:image" content="https://visdap.github.io/assets/img/og/fr.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Widget horloge 24 heures pour Android — Visdap">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../assets/img/favicon.ico" sizes="32x32 48x48">
+  <link rel="icon" href="../../assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script>try{var t=localStorage.getItem("visdap-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script src="../../assets/js/site.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Visdap: Visual Day Planner", "applicationCategory": "ProductivityApplication", "operatingSystem": "Android, Wear OS, Windows", "description": "Une horloge ronde de 24 heures avec vos tâches sur l'écran d'accueil Android. Visdap propose un widget horloge, un widget de liste de tâches, une horloge flottante et un fond d'écran animé.", "url": "https://visdap.github.io/fr/android-widget/", "inLanguage": "fr", "image": "https://visdap.github.io/assets/img/og/fr.jpg", "author": {"@type": "Organization", "name": "Woder"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": ["https://play.google.com/store/apps/details?id=com.timeforlife.app", "https://apps.microsoft.com/detail/9PL7ZJ6HBW9S"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Les widgets sont-ils gratuits ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les deux widgets font partie de la version gratuite. Pro ajoute des tâches illimitées, les projets sur le cadran et plus encore."}}, {"@type": "Question", "name": "Quelles versions d'Android sont prises en charge ?", "acceptedAnswer": {"@type": "Answer", "text": "Android 8.0 et versions ultérieures."}}, {"@type": "Question", "name": "Les widgets ont-ils besoin d'internet ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Ils affichent les tâches enregistrées sur votre téléphone."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../">
+      <img src="../../assets/img/icon-96.webp" width="36" height="36" alt="">
+      <span translate="no">Visdap</span>
+    </a>
+    <nav class="nav" aria-label="Rubriques">
+      <a href="../#features">Fonctions</a>
+      <a href="../#watch">Wear OS</a>
+      <a href="../#windows">Windows</a>
+      <a href="../#pricing">Free et Pro</a>
+      <a href="../#privacy">Confidentialité</a>
+      <a href="../#faq">FAQ</a>
+    </nav>
+    <div class="tools">
+      <details class="menu">
+        <summary aria-label="Menu"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <nav class="menu-list" aria-label="Menu">
+          <a href="../#features">Fonctions</a>
+          <a href="../#watch">Wear OS</a>
+          <a href="../#windows">Windows</a>
+          <a href="../#pricing">Free et Pro</a>
+          <a href="../#privacy">Confidentialité</a>
+          <a href="../#faq">FAQ</a>
+        </nav>
+      </details>
+      <details class="lang">
+        <summary><span class="sr-only">Langue: </span>FR<span class="sr-only"> Français</span></summary>
+        <ul class="lang-list"><li><a href="../../en/android-widget/" hreflang="en" lang="en">English</a></li><li><a href="../../uk/android-widget/" hreflang="uk" lang="uk">Українська</a></li><li><a href="../../de/android-widget/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../es/android-widget/" hreflang="es" lang="es">Español</a></li><li><a href="../../fr/android-widget/" hreflang="fr" lang="fr" aria-current="page">Français</a></li></ul>
+      </details>
+      <button class="theme" type="button" aria-pressed="false" aria-label="Thème sombre" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero sub-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <nav class="crumbs" aria-label="Fil d&#x27;Ariane">
+          <a href="../" translate="no">Visdap</a> <span aria-hidden="true">›</span> <span aria-current="page">Widget Android</span>
+        </nav>
+        <p class="eyebrow">Android</p>
+        <h1>Un widget horloge 24 heures pour votre écran d&#x27;accueil</h1>
+        <p class="lead">Visdap affiche toute votre journée sur une horloge ronde de 24 heures, directement sur l&#x27;écran d&#x27;accueil Android. Vos tâches apparaissent en secteurs colorés autour du cadran.</p>
+        <div class="badges"><a class="badge badge-gp" href="https://play.google.com/store/apps/details?id=com.timeforlife.app&amp;hl=fr&amp;referrer=utm_source%3Dvisdap_site%26utm_medium%3Dseo_android"><img src="../../assets/img/badges/gp-fr.png" width="646" height="250" alt="Disponible sur Google Play"></a></div>
+        <ul class="trust" aria-label="En bref"><li>Sans compte</li><li>Sans publicité ni pistage</li><li>Fonctionne hors ligne</li></ul>
+      </div>
+      <figure class="sub-img"><img class="sub-pic sub-pic-android-widget" src="../../assets/img/android/widget-240.webp" srcset="../../assets/img/android/widget-240.webp 240w, ../../assets/img/android/widget-480.webp 480w" sizes="240px" width="240" height="240" alt="Le widget horloge 24 heures de Visdap pour Android"></figure>
+    </div>
+  </section>
+
+  <section class="sub-points" aria-labelledby="points-title">
+    <div class="wrap narrow">
+      <h2 id="points-title">Ce que vous obtenez sur Android</h2>
+      <ul class="who-list">
+        <li><h3>Widget horloge</h3><p>Une horloge ronde de 24 heures avec vos tâches en secteurs : vous voyez la journée sans ouvrir l&#x27;appli.</p></li>
+        <li><h3>Widget de liste de tâches</h3><p>Les tâches du jour avec leurs horaires dans un widget à part.</p></li>
+        <li><h3>Horloge flottante</h3><p>Une petite horloge de 24 heures au-dessus des autres applis, si vous l&#x27;autorisez.</p></li>
+        <li><h3>Fond d&#x27;écran animé</h3><p>L&#x27;horloge de 24 heures en fond d&#x27;écran animé sur l&#x27;écran d&#x27;accueil et l&#x27;écran de verrouillage.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="sub-faq-title">
+    <div class="wrap narrow">
+      <h2 id="sub-faq-title">Questions et réponses</h2>
+      <details><summary>Les widgets sont-ils gratuits ?</summary><p>Oui. Les deux widgets font partie de la version gratuite. Pro ajoute des tâches illimitées, les projets sur le cadran et plus encore.</p></details>
+      <details><summary>Quelles versions d&#x27;Android sont prises en charge ?</summary><p>Android 8.0 et versions ultérieures.</p></details>
+      <details><summary>Les widgets ont-ils besoin d&#x27;internet ?</summary><p>Non. Ils affichent les tâches enregistrées sur votre téléphone.</p></details>
+    </div>
+  </section>
+
+  <section class="sub-more" aria-labelledby="more-title">
+    <div class="wrap">
+      <h2 id="more-title">En savoir plus sur Visdap</h2>
+      <ul class="more-links"><li><a href="../wear-os-watch-face/">Cadran Wear OS</a></li><li><a href="../windows-desktop-clock/">Horloge de bureau Windows</a></li><li><a href="../">Toutes les fonctions de Visdap</a></li></ul>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="wrap cta-box">
+      <h2 id="cta-title">Planifiez aujourd&#x27;hui. Voyez tout.</h2>
+      <p class="lead">Installez Visdap et planifiez votre première journée en quelques minutes. Gratuit pour commencer.</p>
+      <div class="badges"><a class="badge badge-gp" href="https://play.google.com/store/apps/details?id=com.timeforlife.app&amp;hl=fr&amp;referrer=utm_source%3Dvisdap_site%26utm_medium%3Dcta"><img src="../../assets/img/badges/gp-fr.png" width="646" height="250" alt="Disponible sur Google Play"></a><a class="badge badge-ms" href="https://apps.microsoft.com/detail/9PL7ZJ6HBW9S?hl=fr&amp;cid=visdap_site_cta"><img class="on-light" src="../../assets/img/badges/ms-fr-dark.svg" width="161" height="44" alt="Télécharger dans le Microsoft Store"><img class="on-dark" src="../../assets/img/badges/ms-fr-light.svg" width="161" height="44" alt="Télécharger dans le Microsoft Store"></a></div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="brand"><img src="../../assets/img/icon-96.webp" width="28" height="28" alt="" loading="lazy"> <span translate="no">Visdap</span></p>
+      <p><a href="mailto:oleksandr.miletskyi@gmail.com">oleksandr.miletskyi@gmail.com</a></p>
+    </div>
+    <ul class="foot-links">
+      <li><a href="https://oleksandrmiletskyi-web.github.io/timeforlife/support.html">Assistance</a></li>
+      <li><a href="https://oleksandrmiletskyi-web.github.io/timeforlife/privacy_policy.html">Politique de confidentialité</a></li>
+      <li><a href="https://oleksandrmiletskyi-web.github.io/timeforlife/terms_of_service.html">Conditions d&#x27;utilisation</a></li>
+    </ul>
+    <nav aria-label="Langue">
+      <ul class="foot-langs"><li><a href="../../en/android-widget/" hreflang="en" lang="en">English</a></li><li><a href="../../uk/android-widget/" hreflang="uk" lang="uk">Українська</a></li><li><a href="../../de/android-widget/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../es/android-widget/" hreflang="es" lang="es">Español</a></li><li><a href="../../fr/android-widget/" hreflang="fr" lang="fr" aria-current="page">Français</a></li></ul>
+    </nav>
+  </div>
+  <div class="wrap legal">
+    <p>© 2026 Woder</p>
+    <p>Google Play et le logo Google Play sont des marques de Google LLC. Microsoft et le logo Microsoft Store sont des marques du groupe de sociétés Microsoft.</p>
+  </div>
+</footer>
+</body>
+</html>
