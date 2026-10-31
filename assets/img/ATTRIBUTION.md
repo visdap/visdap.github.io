@@ -24,6 +24,6 @@ Apple App Store: значок не використовується, доки п
 ## Скріншоти й іконка
 
 З репозиторію програми (лише читання), через `tools/prepare_images.py`:
-- `shots/<мова>/*` — `store_listing/app_store_screenshots_run5/app_store_screenshots/6.9/<мова>/{01,03,07,09}.png`;
+- `shots/<мова>/*` — `store_listing/play_1.1.4/phone/<мова>/{01,04,03,06}.png` (опублікована Android 1.1.4);
 - `watch/<мова>-dial-*` — `android/store_assets/screenshots_wear/<мова>_1_dial.png`;
 - `icon-*`, `og-512.jpg`, `favicon.ico`, `apple-touch-icon.png` — `ios/TimeForLife/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png` (1024×1024; логотип «рука з кишеньковим годинником», рішення власника 18.10.2026).

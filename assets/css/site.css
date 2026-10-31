@@ -200,9 +200,18 @@ p { margin: 0 0 1em; }
 .hero { padding: clamp(32px, 6vw, 80px) 0 clamp(40px, 6vw, 88px); }
 .hero-grid { display: grid; gap: clamp(28px, 5vw, 64px); align-items: center; }
 @media (min-width: 56em) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
+/* На телефоні й планшеті циферблат іде одразу за значками, інакше перший екран не показує, що це за програма; подробиці — під ним. */
+@media (max-width: 55.99em) {
+  .hero-grid { display: flex; flex-direction: column; gap: 0; align-items: stretch; }
+  .hero-text { display: contents; }
+  .eyebrow { align-self: flex-start; }
+  .hero-dial { order: 1; align-self: center; margin-top: 24px; }
+  .trust, .trust-note, .soon, .notify-hero, .hero-text > .note { order: 2; }
+}
 .eyebrow { display: inline-block; color: var(--pill-ink); background: var(--pill-bg); font-weight: 700; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; margin-bottom: 1em; }
 .lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--muted); max-width: 38em; }
 .hero .lead { margin-bottom: 1.5em; }
+.hero-free { margin: 8px 0 0; font-weight: 700; }
 .note { color: var(--muted); font-size: 0.95rem; }
 .soon { margin: 14px 0 6px; font-weight: 600; }
 .soon span { color: var(--brand); }
@@ -474,7 +483,25 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: va
 .sub-pic-wear-os-watch-face { border-radius: 50%; box-shadow: 0 0 0 10px #1b1d1f, 0 0 0 12px #3a3d40, var(--shadow); margin: 12px; }
 .sub-pic-android-widget { border-radius: 50%; }
 .sub-pic-windows-desktop-clock { width: min(100%, 560px); }
+.sub-pic-24-hour-planner, .sub-pic-freelance-day-planner, .sub-pic-study-planner { width: min(240px, 70vw); height: auto; border-radius: 28px; border: 1px solid var(--line); background: var(--surface); }
 .more-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; }
 .more-links a { display: inline-block; padding: 12px 18px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-weight: 650; text-decoration: none; }
 .more-links a:hover { border-color: var(--brand); }
 .platform-list .more { margin-top: 4px; }
+
+/* Сторінка для преси */
+.fact-sheet { display: grid; gap: 0; margin: 24px 0 0; border-top: 1px solid var(--line); }
+.fact-sheet > div { display: grid; gap: 4px 24px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 40em) { .fact-sheet > div { grid-template-columns: 12em 1fr; } }
+.fact-sheet dt { font-weight: 700; }
+.fact-sheet dd { margin: 0; overflow-wrap: anywhere; }
+.press-copy h2 + .press-quote { margin-bottom: 40px; }
+.press-quote { margin: 16px 0 0; padding: 18px 22px; border-left: 4px solid var(--brand); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); }
+.press-quote p { margin: 0; }
+.press-quote p + p { margin-top: 1em; }
+.press-gallery { display: grid; gap: 20px; margin: 24px 0; padding: 0; list-style: none; grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr)); }
+.press-item { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); text-decoration: none; color: inherit; }
+.press-item:hover { border-color: var(--brand); }
+.press-item img { width: 100%; height: 200px; object-fit: contain; border-radius: 12px; }
+.press-cap { font-weight: 650; }
+.press-meta { font-size: 0.85rem; color: var(--muted); }
